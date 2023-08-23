@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redegeo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css')}}">
 </head>
 <body>
-$END$
+<div class="container">
+
+<!-- CÓDIGO PARA FAZER APARECEREM AS MENSAGENS DA FUNÇÃO FLASH-->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul id="messages" class="list-unstyled">
+            {% for message in messages %}
+                <li class="alert alert-success">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+
+{% block conteudo %} {% endblock %}
+
+    </div>
+
 </body>
 </html>

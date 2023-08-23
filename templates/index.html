@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "template.html" %}
+{% block conteudo %}
+
+   <h1>Consultas do Redegeo</h1>
+   <a href="{{ url_for('atendimento', atendimentos = cursor) }}">Consultar</a>
+
+{% endblock %}
