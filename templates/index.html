@@ -1,7 +1,10 @@
 {% extends "template.html" %}
 {% block conteudo %}
-
+<div class="text-center">
    <h1>Consultas do Redegeo</h1>
-   <a href="{{ url_for('atendimento', atendimentos = cursor) }}">Consultar Atendimentos</a>
-
+   <p></p>
+   <a href="{{ url_for('atendimento', atendimentos = cursor) }}"> <button type="button" class="btn btn-primary">Consultar Atendimentos</button> </a>
+   <p></p>
+   <a href="{{ url_for('servico', servicos = cursor) }}"> <button type="button" class="btn btn-primary">Consultar Serviços</button> </a>
+</div>
 {% endblock %}
