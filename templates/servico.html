@@ -8,8 +8,8 @@
       <form action="/consulta_servico" method='post' >
         <fieldset>
           <div class="form-group">
-            <label for="matricula">Matrícula</label>
-            <input type="text" id="matricula" name="matricula" class="form-control">
+            <label for="servico">Serviço</label>
+            <input type="text" id="servico" name="servico" class="form-control">
           </div>
            <p></p>
         <button type="submit" class="btn btn-primary btn-salvar">Consultar</button>
@@ -23,10 +23,16 @@
                 <tr>
                     <th>Número SS</th>
                     <th>Data SS</th>
-                    <th>Tipo de Serviço</th>
                     <th>Serviço</th>
                     <th>Matrícula</th>
                     <th>Solicitante</th>
+                    <th>Logradouro</th>
+                    <th>Número</th>
+                    <th>Complemento</th>
+                    <th>Telefone</th>
+                    <th>SS de origem</th>
+                    <th>Usuário</th>
+                    <th>Unidade</th>
                     <th>Observação</th>
                 </tr>
         </thead>
@@ -41,9 +47,123 @@
                     <td>{{servico[4]}}</td>
                     <td>{{servico[5]}}</td>
                     <td>{{servico[6]}}</td>
+                    <td>{{servico[7]}}</td>
+                    <td>{{servico[8]}}</td>
+                    <td>{{servico[9]}}</td>
+                    <td>{{servico[10]}}</td>
+                    <td>{{servico[11]}}</td>
+                    <td>{{servico[12]}}</td>
                 </tr>
             {%endfor%}
         </tbody>
     </table>
+<!--
+
+{% for servico in servicos %}
+<h1> teste: {{servico[0]}}  </h1>
+{%endfor%}
+
+<table class="table table-striped table-responsive table-bordered">
+    <thead class="thead-default">
+        <th>Atualizado</th>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td style="width: 100.0000%;">
+                <table class="table table-striped table-responsive table-bordered">
+                    <tbody>
+                        <tr>
+                            <td style="width: 33.3333%;">N&uacute;mero da SS&nbsp; </td>
+                            <td style="width: 33.3333%;">Tipo da SS </td>
+                            <td style="width: 33.3333%;">Data e Hora </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-striped table-responsive table-bordered">
+                    <tbody>
+                        <tr>
+                            <td style="width: 50.0000%;">Servi&ccedil;o</td>
+                            <td style="width: 50.0000%;">Unidade Executora</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-striped table-responsive table-bordered">
+                    <tbody>
+                        <tr>
+                            <td style="width: 50.0000%;">Dados do Solicitante<br>
+                                <table class="table table-striped table-responsive table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 50.0000%;">Requerente</td>
+                                            <td style="width: 50.0000%;"><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 50.0000%;">Matr&iacute;cula</td>
+                                            <td style="width: 50.0000%;"><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 50.0000%;">Telefone</td>
+                                            <td style="width: 50.0000%;"><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 50.0000%;">Nome</td>
+                                            <td style="width: 50.0000%;"><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 50.0000%;">Rua</td>
+                                            <td style="width: 50.0000%;"><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 50.0000%;">N&uacute;mero</td>
+                                            <td style="width: 50.0000%;"><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 50.0000%;">Complemente</td>
+                                            <td style="width: 50.0000%;"><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 50.0000%;">Bairro</td>
+                                            <td style="width: 50.0000%;"><br></td>
+                                        </tr>
+                                    </tbody>
+                                </table><br>
+                            </td>
+                            <td style="width: 50.0000%;">Posi&ccedil;&atilde;o de Execu&ccedil;&atilde;o<br>
+                                <table class="table table-striped table-responsive table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 50.0000%;">Programado</td>
+                                            <td style="width: 50.0000%;"><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 50.0000%;">Iniciado</td>
+                                            <td style="width: 50.0000%;"><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 50.0000%;">Finalizado</td>
+                                            <td style="width: 50.0000%;"><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 50.0000%;">Equipe executora</td>
+                                            <td style="width: 50.0000%;"><br></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 50.0000%;">Atualizado</td>
+                                            <td style="width: 50.0000%;"><br></td>
+                                        </tr>
+                                    </tbody>
+                                </table><br>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>Observa&ccedil;&atilde;o&nbsp;
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+-->
 
 {% endblock %}
